@@ -22,15 +22,12 @@ int main() {
 
     printf("===== SOFTWARE DEPARTMENT MARKSHEET =====\n\n");
 
-    // Input Student Name
     printf("Enter Student Name: ");
     scanf("%s", name);
 
-    // Input Roll Number
     printf("Enter Roll Number: ");
     scanf("%s", rollno);
 
-    // Input Marks
     printf("\nEnter Marks (Out of 100)\n");
 
     for(i = 0; i < subjects; i++) {
@@ -40,10 +37,8 @@ int main() {
         total += marks[i];
     }
 
-    // Calculate Percentage
     percentage = total / subjects;
 
-    // GPA Calculation
     if(percentage >= 90)
         gpa = 4.0;
     else if(percentage >= 85)
@@ -63,7 +58,6 @@ int main() {
     else
         gpa = 0.0;
 
-    // Grade Calculation
     if(percentage >= 90)
         strcpy(grade, "A+");
     else if(percentage >= 85)
@@ -81,7 +75,6 @@ int main() {
     else
         strcpy(grade, "F");
 
-    // Output Marksheet
     printf("\n\n===== FIRST YEAR MARKSHEET =====\n");
     printf("Student Name : %s\n", name);
     printf("Roll Number  : %s\n\n", rollno);
